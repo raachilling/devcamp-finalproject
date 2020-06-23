@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Codepen Homepage</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&display=swap" rel="stylesheet">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ"
+        crossorigin="anonymous"></script>
+
+    <style>
+        html {
+            font-family: 'Lato', sans-serif;
+        }
+
+        body {
+            margin: 0px;
+            color: white;
+            text-decoration: none;
+            background-color: rgb(22, 22, 22);
+        }
+
+        .navbar {
+            background: rgb(15, 14, 12);
+            margin-top: -10px;
+        }
+
+        .navbar h2 {
+            color: #ffdd40;
+            font-weight: 400;
+            font-size: 0.8rem;
+            margin-left: 230px;
+            padding: 10px 0px 0px 0px;
+            margin-bottom: -30px;
+        }
+
+        .navbar img {
+            display: flex;
+            align-items: center;
+            width: 15%;
+            margin-right: 15px;
+            margin-top: 20px;
+        }
+
+        .left-column > .links-wrapper {
+            display: grid;
+            margin-left: 230px;
+            font-size: 1em;
+            grid-template-columns: 0.08fr 0.1fr 0.08fr 0.03fr; 
+            font-weight: 700;
+            margin-top: -30px;
+        }
+
+        .left-column > .links-wrapper a {
+            color: white;
+            text-decoration: none;  
+            font-size: 1.1rem;
+            display: inline-block;
+            padding: 3px 14px 5px 0;
+        }
+
+        .left-column > .links-wrapper a:hover {
+            color: #9b9dad;;
+            font-size: 1.1em;
+            transition: 0.5s;  
+            font-weight: bolder;
+        }
+
+        .separate-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: -250px;
+            margin-top: -28px;
+        }
+
+        .separate-link a {
+            color: grey;
+            margin-left: 150px;
+            text-decoration: none;
+            font-size: 1em;
+            color: #9b9dad;
+            padding: 3px 5px 5px 0;
+        }
+
+        .separate-link > i.icon:hover {
+            color:rgb(102, 213, 143);
+            font-size: 1.1em;
+            transition: 0.5s;
+        }
+
+        
+
+        .right-column > .links-wrapper {
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .right-column > .links-wrapper a {
+            color: white;
+            text-decoration: none; 
+        }
+
+
+        .right-column > .links-wrapper > .nav-link {
+            background-color: #3b3c47;
+            color:white;
+            font-size: 1em;
+            padding: 10px 15px;
+            border: 3px solid rgb(15, 14, 12);
+            border-radius: 7px;
+            outline: none;
+            transition: 0.3s;
+            margin-bottom: 8px;
+            margin-right: 15px;
+        }
+
+        .right-column > .links-wrapper > .nav-link:hover {
+            color:aquamarine;
+            font-size: 1em;
+            transition: 0.1s;
+        }
+
+        .right-column > .links-wrapper > .icon {
+            background-color: rgb(15, 14, 12);
+            color:  #3b3c47;
+            font-size: 1.75em;
+            border: 3px solid rgb(15, 14, 12);
+            border-radius: 2px;
+            outline: none;
+            transition: 0.3s;
+            margin-bottom: 8px;
+        }
+
+        .right-column > .links-wrapper > .icon:hover {
+            color:aquamarine;
+            font-size: 1.75em;
+            transition: 0.3s;
+        }
+
+        .svg-inline--fa.fa-w-14 {
+            color: rgb(102, 213, 143);
+        }
+
+        .svg-inline--fa.fa-w-14:hover {
+            color:white;
+            font-size: 1.1em;
+            transition: 0.5s;
+        }
+
+
+        .info-section h2 {
+            font-weight: 100;
+            font-size: 32px;
+            padding-left: 60px;
+            padding-right:900px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+        }
+
+        .info-section h3 {
+            font-weight: 100;
+            font-size: 28px;
+            padding-left: 60px;
+            padding-right:900px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+        }
+
+
+        .buttons {
+            display: flex;
+            padding-left: 55px;
+            font-weight: 700;
+        }
+
+        .buttons > .button1 a {
+            background-color: rgb(102, 213, 143);
+            text-decoration: none;
+            color:#1e1f26;
+            font-size: 1.5em;
+            padding: 10px 25px;
+            border: 5px solid  rgb(22, 22, 22);
+            border-radius: 8px;
+            outline: none;
+            text-decoration: none;
+            transition: 0.5s;
+        }
+
+        .buttons > .button1 a:hover {
+            color: white;
+            font-size: 1.53em;
+            transition: 0.5s; 
+
+        }
+
+        .buttons > .button2  a {
+            background-color: rgb(15, 14, 12);
+            color:white;
+            font-size: 1.5em;
+            padding: 10px 25px;
+            border: 20px solid  rgb(22, 22, 22);
+            border-radius: 8px;
+            outline: none;
+            text-decoration: none;
+            transition: 0.5s;
+        }
+
+        .buttons > .button2 a:hover {
+            color: rgb(102, 213, 143);
+            font-size: 1.53em;
+            transition: 0.5s; 
+        }
+
+        .bottom-section > .TEAMS {
+            background-color:#1e1f26;
+            text-decoration: none;
+            color:white;
+            font-size: 1em;
+            padding: 10px 98px;
+            border: 1px solid  #5a5f73;
+            border-radius: 2px;
+            outline: none;
+            text-decoration: none;
+        }
+
+        .bottom-section > .PRIVACY {
+            background-color:#1e1f26;
+            text-decoration: none;
+            color:white;
+            font-size: 1em;
+            padding: 10px 98px;
+            border: 1px solid  #5a5f73;
+            border-radius: 2px;
+            outline: none;
+            text-decoration: none;
+        }
+
+        .bottom-section > .EDUCATION {
+            background-color:#1e1f26;
+            text-decoration: none;
+            color:white;
+            font-size: 1em;
+            padding: 10px 98px;
+            border: 1px solid  #5a5f73;
+            border-radius: 2px;
+            outline: none;
+            text-decoration: none;
+        }
+
+        .bottom-section > .WRITING {
+            background-color: #1e1f26;
+            text-decoration: none;
+            color:white;
+            font-size: 1em;
+            padding: 10px 100px;
+            border: 1px solid  #5a5f73;
+            border-radius: 2px;
+            outline: none;
+            text-decoration: none;
+        }
+
+        .personal-image p {
+            font-weight: bolder;
+            font-size: 18px;
+            padding-left: 900px;
+            padding-right:60px;
+            padding-top: -10000px;
+            padding-bottom: 5px;
+            margin-top: -300px;
+        }
+
+        .personal-image img {
+            width: 50%;
+            padding-left: 900px;
+            padding-right:60px;
+            padding-top: -10000px;
+            padding-bottom: 5px;
+        }
+
+
+
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <h2>EXPLORE</h2>
+                
+        <img src="logo/codepen.io-blac.png" alt="">
+
+        <div class="left-column">
+
+            <div class="links-wrapper">
+                <div class="nav-link">
+                    <a href="#">Pens</a>
+                </div>
+                <div class="nav-link">
+                    <a href="#">Projects</a>
+                </div>
+                <div class="nav-link">
+                    <a href="#">Posts</a>
+                </div>
+                <div class="nav-link">
+                    <a href="#">Collections</a>
+                </div>
+            </div>
+
+            <div class="separate-link">
+                <a href="#">Spark</a>
+                
+                <i class="fas fa-chevron-down"></i>
+                
+            </div>
+            
+            <div class="right-column">
+                <div class="links-wrapper">
+                    <button type="button" class="nav-link">
+                        Create
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+
+                    <button type="button" class="icon">
+                        <i class="fas fa-search"></i>
+                    </button>
+
+                    <button type="button" class="nav-link">
+                        Log In
+                    </button>
+
+                    <button type="button" class="nav-link">
+                        Sign Up
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="info-section">
+        <h2>CodePen is a social development environment for front-end designers and developers. 👋</h2>
+
+        <h3>It's the best place to build and deploy a website, show off your work, build test cases, and find inspiration.</h3>
+        
+        <div class="buttons">
+            <div class="button1">
+                <a href="#">Sign Up for Free</a>
+            </div>
+
+            <div class="button2">
+                <a href="#">Learn More</a>
+            </div>
+        </div>
+
+        <div class="personal-image">
+            <p>This is CodePen Projects!</p>
+            
+            <img src="logo/personal-image.png" alt="">
+            
+        </div>
+    </div>
+
+    <div class="bottom-section">
+        <span class="TEAMS">
+            CodePen for TEAMS
+        </span>
+
+        <span class="EDUCATION">
+            CodePen for EUCATION
+        </span>
+
+        <span class="PRIVACY">
+            CodePen for PRIVACY
+        </span>
+
+        <span class="WRITING">
+            CodePen for WRITING
+        </span>
+    </div>
+
+    <div class="footer"></div>
+    
+</body>
+</html>
